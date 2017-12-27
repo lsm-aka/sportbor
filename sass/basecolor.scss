@@ -1,0 +1,1702 @@
+$basefontsize: 10;
+$lineheight: 1;
+$white: #ffffff;
+$black: #000000;
+$gutter: 20;
+$basesize: 10;
+
+/*#######################################*/
+
+/* MIXINS */
+
+/*#######################################*/
+@mixin brr($rs, $sz, $color:#ff9900) {
+  border: $sz solid $color;
+  -webkit-border-radius: $rs;
+  border-radius: $rs;
+}
+
+@mixin dur($t) {
+  -webkit-transition-duration: $t + ms;
+  -o-transition-duration: $t + ms;
+  -moz-transition-duration: $t + ms;
+  transition-duration: $t + ms;
+}
+
+@mixin bgcheckbox($img) {
+  background-image: url(../img/#{$img});
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin brdl($sz, $color, $type:solid) {
+  border-top: $sz + px $type $color;
+  border-right: $sz + px $type $color;
+  border-bottom: $sz + px $type $color;
+  border-left: 0 $type $color;
+}
+
+@mixin brdr($sz, $color, $type:solid) {
+  border-top: $sz + px $type $color;
+  border-right: 0 $type $color;
+  border-bottom: $sz + px $type $color;
+  border-left: $sz + px $type $color;
+}
+
+/*#######################################*/
+
+/* END MIXINS */
+
+/*########################################*/
+
+a.active{
+  color:$basebgcolor;
+}
+
+/*#######################################*/
+
+/* DARK BLOCK */
+
+/*########################################*/
+
+.dark {
+  color: transparentize($white, 0.4);
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $white;
+  }
+
+  /*################ ICONS ########################*/
+
+  /* icons in dark block */ 
+
+  .icon-round {
+    color: #9bd259 !important;
+  }
+
+  .lsm-stack {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: transparentize($white, 0.4);
+    }
+
+    .lsm-stack-2x {
+      color: transparentize($white, 0.7);
+    }
+
+    .lsm-stack-white {
+      color: transparentize($white, 0);
+    }
+
+    .lsm-circle-full {
+      background: $basebgcolor;
+    }
+
+  }
+
+  .lsm-stack:hover,
+  .lsm-stack:focus,
+  .lsm-stack:active {
+    .lsm-circle-full {
+      background: lighten($basebgcolor, 10%);
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: transparentize($white, .1);
+    }
+
+    .lsm-stack-white {
+      color: transparentize($white, .1);
+    }
+
+  }
+
+  .lsm-stack:active {
+    .lsm-circle-full {
+      background: darken($basebgcolor, 10%);
+    }
+
+  }
+
+  /* links in dark block */
+  a.link-line {
+    color: transparentize($white, 0);
+  }
+
+  a.link-line:after {
+    border-bottom: 1px solid transparentize($white, .7);
+  }
+
+  a.link-line:hover {
+    color: transparentize($white, 0);
+  }
+
+  .default-bg {
+    background-color: transparentize($white, .85);
+  }
+
+  .default-bg:hover {
+    color: $black;
+    background-color: transparentize($white, .2);
+    box-shadow:none;
+  }
+/*
+  .default-bg:focus,
+  .default-bg:active {
+    color: $black;
+    background-color: transparentize($white, .2);
+  }
+*/
+  .color-bg {
+    background-color: $basebgcolor;
+  }
+
+  .color-bg:hover {
+    background-color: lighten($basebgcolor, 10%);
+    box-shadow:none;
+  }
+/*
+  .color-bg:active,
+  .color-bg:focus {
+    background-color: darken($basebgcolor, 10%);
+  }
+*/
+  /* buttons in dark block */
+  .btn-default {
+    background-color: transparentize($white, 1);
+    color: $white;
+    border-color: $white;
+  }
+
+  .btn-default:hover {   
+    color: $basebgcolor;
+    border-color: $basebgcolor;
+  }
+/*
+  .btn-default:active,
+  .btn-default:focus {    
+    color: darken($basebgcolor, 10%);
+    box-shadow: 0 10px 30px transparentize($white, .7);    
+  }
+*/
+  .btn-color {
+    background-color: $basebgcolor;   
+    color: $white;
+    @include dur(200);
+  }
+
+  .btn-color:hover {    
+    box-shadow:none;
+  }
+
+  .footer {
+    .btn {
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: transparentize($white, 0.7);
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: $basebgcolor;
+        }
+
+      }
+
+    }
+
+  }
+
+  .footer-bottom{
+    border-color: transparentize($white, 0.9);
+    color: transparentize($white, 0.6);
+    .copy-right{     
+      &>span{        
+       color: transparentize($white, 0.3);
+      }
+    }
+  }
+
+  /* placeholders in dark block */
+  ::-webkit-input-placeholder {
+    color: transparentize($white, .4);
+  }
+
+  :-moz-placeholder {
+
+    /* Firefox 18- */
+    color: transparentize($white, .4);
+  }
+
+  ::-moz-placeholder {
+
+    /* Firefox 19+ */
+    color: transparentize($white, .4);
+  }
+
+  :-ms-input-placeholder {
+    color: transparentize($white, .4);
+  }
+
+}
+
+/*#######################################*/
+
+/* LIGHT BLOCK */
+
+/*########################################*/
+
+.light {
+  color: transparentize($black, 0.4);
+
+  h2,
+  h4 {
+    color: $black;
+  }
+
+  h1,
+  h3 {
+    color: transparentize($black, .2);
+  }
+
+  /*################ ICONS ########################*/
+  
+
+  /* icons in light block */
+
+  .icon-round {
+    color: #9bd259 !important;
+  }
+
+  .lsm-stack {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: transparentize($black, 0.5);
+    }
+
+    .lsm-stack-2x {
+      color: transparentize($black, 0.9);
+    }
+
+    .lsm-stack-white {
+      color: transparentize($white, 0);
+    }
+
+    .lsm-circle-full {
+      background: $basebgcolor;
+    }
+
+  }
+
+  .lsm-stack:hover,
+  .lsm-stack:focus,
+  .lsm-stack:active {
+    .lsm-circle-full {
+      background: lighten($basebgcolor, 10%);
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: transparentize($black, .5);
+    }
+
+    .lsm-stack-white {
+      color: transparentize($white, .5);
+    }
+
+  }
+
+  .lsm-stack:active {
+    .lsm-circle-full {
+      background: darken($basebgcolor, 10%);
+    }
+
+  }
+
+  /* links in light block */
+  a.link-line {
+    color: transparentize($black, 0);
+  }
+
+  a.link-line:after {
+    border-bottom: 1px solid transparentize($black, .7);
+  }
+
+  a.link-line:hover {
+    color: transparentize($black, 0);
+  }
+
+
+  .default-bg {
+    background-color: transparentize($black, .2);
+    color: $white;
+
+    .icon-aple {
+      color: $white;
+    }
+
+  }
+
+  .default-bg:hover {
+    color: $white;
+    background-color: transparentize($black, .1);
+	box-shadow:none;
+    .icon-aple {
+      color: $white;
+    }
+
+  }
+/*
+  .default-bg:focus,
+  .default-bg:active {
+    color: $white;
+    background-color: transparentize($black, 0);
+
+    .icon-aple {
+      color: $white;
+    }
+
+  }
+*/
+  .color-bg {
+    background-color: $basebgcolor;
+  }
+
+  .color-bg:hover {
+    background-color: lighten($basebgcolor, 10%);
+    box-shadow:none;
+  }
+/*
+  .color-bg:active,
+  .color-bg:focus {
+    background-color: darken($basebgcolor, 10%);
+  }
+*/
+  /* buttons in light block */
+  .btn-default {
+    background-color: transparentize($black, 1);
+    color: transparentize($black, .5);    
+  }
+
+  .btn-default:hover {
+    background-color: transparentize($black, 1);
+    color: $basebgcolor; 
+    border-color: $basebgcolor;  
+  }
+/*
+  .btn-default:active,
+  .btn-default:focus {
+    background-color: transparentize($black, 1);
+    color: darken($basebgcolor, 10%);   
+  }
+*/
+  
+  .btn-color {
+    background-color: $basebgcolor;    
+    color: $white;
+    @include dur(200);
+  }
+
+  .btn-color:hover {
+    box-shadow:none;
+  }
+
+
+  .footer {
+    .btn {
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: transparentize($black, 0.7);
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: $basebgcolor;
+        }
+
+      }
+
+    }
+
+  }
+
+  .footer-bottom{
+    border-color: transparentize($black, 0.9);
+    color: transparentize($black, 0.6);
+    .copy-right{
+      &>span{        
+       color: transparentize($black, 0.3);
+      }
+    }
+  }
+
+  /* placeholders in light block */
+  ::-webkit-input-placeholder {
+    color: transparentize($black, .4);
+  }
+
+  :-moz-placeholder {
+
+    /* Firefox 18- */
+    color: transparentize($black, .4);
+  }
+
+  ::-moz-placeholder {
+
+    /* Firefox 19+ */
+    color: transparentize($black, .4);
+  }
+
+  :-ms-input-placeholder {
+    color: transparentize($black, .4);
+  }
+
+}
+
+
+/*#############################################################*/
+.light {
+  .owl-dot {
+    background: transparentize($black, .6);
+  }
+
+  .owl-dot.active,
+  .owl-dot:hover {
+    background: $basebgcolor;
+  }
+
+  .owl-nav-block {
+    .lsm-stack {
+      .lsm-stack-2x {
+        color: transparentize($black, .8) !important;
+      }
+
+    }
+
+    .icon-angle-left,
+    .icon-angle-right {
+      color: transparentize($black, .8);
+    }
+
+    .icon-angle-left:hover,
+    .icon-angle-left:active,
+    .icon-angle-left:active,
+    .icon-angle-right:hover,
+    .icon-angle-right:active,
+    .icon-angle-right:active {
+      color: transparentize($black, .3);
+    }
+
+  }
+
+  .footer {
+    .date-f {
+      color: transparentize($black, .7);
+    }
+
+    .text-block {
+      a {
+        color: transparentize($black, .3);
+      }
+
+    }
+
+    .white-text {
+      color: $black;
+    }
+
+  }
+
+}
+
+.dark {
+  .owl-dot {
+    background: transparentize($white, .6);
+  }
+
+  .owl-dot.active,
+  .owl-dot:hover {
+    background: $basebgcolor;
+  }
+
+  .owl-nav-block {
+    .lsm-stack {
+      .lsm-stack-2x {
+        color: transparentize($white, .7) !important;
+      }
+
+    }
+
+    .icon-angle-left,
+    .icon-angle-right {
+      color: transparentize($white, .8);
+    }
+
+    .icon-angle-left:hover,
+    .icon-angle-left:active,
+    .icon-angle-left:active,
+    .icon-angle-right:hover,
+    .icon-angle-right:active,
+    .icon-angle-right:active {
+      color: transparentize($white, .1);
+    }
+
+  }
+
+  .footer {
+    .date-f {
+      color: transparentize($white, .7);
+    }
+    
+    li{
+      a:hover,
+      a:active,
+      a:focus {
+        color: $basebgcolor;
+        box-shadow:none;
+      }
+    }
+    
+
+    .text-block {
+      a {
+        color: transparentize($white, .7);
+      }
+
+    }
+
+    .btn-color:hover{
+      color: $white!important;
+      box-shadow:none;
+    }
+
+    .white-text {
+      color: $white;
+    }
+
+  }
+
+}
+
+
+.icon-select-caret {
+  color: transparentize(#ffffff, .4);
+  font-size: 1.4rem;
+}
+
+.select2-selection {
+  background: transparentize(#ffffff, .9);
+  border: 2px solid transparentize(#ffffff, .7);
+  border-radius: 4px;
+}
+
+.select2-dropdown {
+  background: transparentize(#333, .05);
+}
+
+.select2-results__options {
+  color: transparentize(#ffffff, .4);
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: $basebgcolor;
+  color: transparentize(#ffffff, .4);
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: darken($basebgcolor, 10%);
+  color: transparentize(#ffffff, .4);
+}
+
+
+.flex-container {
+  .read-more {
+    color: $basebgcolor;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($basebgcolor, 10%);
+    }
+
+  }
+
+}
+
+/* dark navbar */
+.box-with-shadow.dark, .mega-menu-inner.dark {
+  .head-container {
+    background: transparentize($black, 0.1);
+    color: transparentize($black, 0.4);
+
+    * {
+      color: transparentize($white, 0.4) !important;
+    }
+
+  }
+
+  .top-menu {
+    background: transparentize($black, 0.1);
+    box-shadow: 0 -1px 1px transparentize($white, .9);
+  }
+
+
+  .logo {
+    color: $white;
+
+    span {
+      color: $basebgcolor;
+    }
+
+  }
+
+  .phone {
+    color: $white;
+  }
+
+  .nav-bar {
+    a {
+      color: $white;
+
+      [class^="icon-"] [class*=" icon-"] {
+        color: transparentize($white, 0.4);
+      }
+
+    }
+
+    a:active,
+    &>li a:hover,
+    *:focus,
+    a.active {
+	    color: $basebgcolor;
+		box-shadow:none;
+      [class^="icon-"] [class*=" icon-"] {
+        color: $basebgcolor;
+      }
+    }
+
+    li {
+      ul {
+        background: transparent;
+        box-shadow: 0 13px 43px -13px transparentize($black, .85);
+
+        li {
+          a {
+            color: $white;
+          }
+
+          a:after {
+            border-color: transparentize($white, 0.7);
+          }
+
+          a:hover,
+          a:focus,
+          a.active {
+            border-color: transparentize($white, 0.4);
+            box-shadow:none;
+          }
+
+        }
+
+        &:after {
+          background: transparentize($black, .1);
+        }
+
+      }
+
+    }
+
+  }
+
+  .hidden-list {
+    color: $white;
+
+    &>[class^="icon-"] [class*=" icon-"] {
+      color: $white !important;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $basebgcolor;
+
+      &>[class^="icon-"] [class*=" icon-"] {
+        color: $basebgcolor !important;
+      }
+
+    }
+
+  }
+
+  ul.hidden-links {
+    background: transparent;
+    box-shadow: 0 13px 43px -13px transparentize($black, .85);
+
+    ul {
+      background: transparent;
+      box-shadow: 0 13px 43px -13px transparentize($black, .85);
+
+      &:after {
+        background: transparentize($black, .1);
+      }
+
+    }
+
+    &:after {
+      background: transparentize($black, .1);
+    }
+
+    li {
+      a {
+        color: $white;
+      }
+
+    }
+
+  }
+
+  .navbar-toggle>.icon-bar {
+    color: transparentize($white, 0.4);
+  }
+
+  .navbar-toggle-text {
+    color: transparentize($white, .1);
+  }
+
+  .menu-feedback {
+    border-color: transparentize($white, 0.9);
+  }
+
+  .callback,
+  .table i,
+  .table span {
+    color: $white;
+  }
+
+  .icon-cross {
+    color: inherit !important;
+  }
+}
+
+
+.mega-menu.dark{
+
+  .top-menu-top {
+    background: transparentize($white, 0);
+    color: transparentize($black, 0.4)!important;
+
+    .top-menu-title {
+      color: transparentize($black, 0.4)!important;
+    }
+
+    .soc-icons {
+      a {
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: transparentize($black, 0.4)!important;
+        }
+
+      }
+
+      a:hover,
+      ul>li>a:focus,
+      ul>li>a:active {
+      	box-shadow:none;
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: transparentize($black, 0) !important;
+        }
+
+      }
+
+    }
+
+  }
+
+  .top-menu-toggle-btn {
+    background: $white;
+
+    .toggle-btn-block {
+      span {
+        color: $black;
+      }
+
+    }
+
+  }  
+}
+
+.dark{
+  &>#sidebar {
+    background: $black;
+    color: $white;
+
+    .closer-link {
+      color: $white;
+
+      span {
+        color: inherit;
+      }
+
+      &:hover {
+        color: $basebgcolor;
+      }
+
+    }
+
+    .nav-bar {
+      a {
+        color: $white;
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: transparentize($white, 0.5);
+        }
+
+      }
+
+      a:active,
+      a:hover,
+      *:focus,
+      a.active {
+        color: $basebgcolor;
+        border-color: transparent !important;
+		box-shadow:none;
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: $basebgcolor;
+        }
+
+      }
+
+      li {
+        ul {
+          background: none;
+          box-shadow: none;
+
+          li {
+            a {
+              color: transparentize($white, 0.5);
+            }
+
+            a:hover,
+            a:focus,
+            a.active {
+              box-shadow:none;
+              color: $basebgcolor;
+              border-color: transparent !important;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .phone {
+      color: $white;
+    }
+
+    .callback {
+      color: $white;
+    }
+
+    .mail-to {
+      color: transparentize($white, 0.5);
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $basebgcolor;
+      }
+
+    }
+
+    .soc-icons {
+      a {
+        color: transparentize($white, 0.5);
+
+        &:hover,
+        &:focus,
+        &.active {
+          color: $basebgcolor;
+        }
+
+      }
+
+    }
+
+    .copyright {
+      color: transparentize($white, 0.5);
+    }
+
+  }
+}
+
+/* light navbar */
+.fixed-top.white-bg {
+  background-color: #fff !important;
+
+  .navbar-collapse {
+    background-color: #fff !important;
+  }
+
+}
+
+.box-with-shadow.light, .mega-menu-inner.light {
+  .head-container {
+    background: $white;
+    color: transparentize($white, 0.4);
+
+    * {
+      color: transparentize($black, 0.4) !important;
+    }
+
+  }
+
+  .top-menu {
+    background: $white;
+    box-shadow: 0 -1px 1px transparentize($black, .9);
+  }
+
+  .phone {
+    color: transparentize($black, 0.1);
+  }
+
+  .navbar-toggle>.icon-bar {
+    color: transparentize($black, 0.4);
+  }
+
+  .logo {
+    color: transparentize($black, 0.2);
+
+    span {
+      color: $basebgcolor;
+    }
+
+  }
+
+  .navbar-toggle-text {
+    color: transparentize($black, .1);
+  }
+
+  .nav-bar {
+    a {
+      color: transparentize($black, 0.4);
+    }
+
+    &>li a:active,
+    &>li a:hover,
+    &>li a:focus,
+    &>li a.active {
+      color: $basebgcolor;
+      box-shadow:none;
+    }
+
+    li {
+      ul {
+        background: transparent;
+        box-shadow: 0 13px 43px -13px transparentize($black, .85);
+
+        li {
+          a:after {
+            border-color: transparentize($black, 0.7);
+          }
+
+        }
+
+        &:after {
+          background: $white;
+        }
+
+      }
+
+    }
+
+  }
+
+  .hidden-list {
+    color: transparentize($black, 0.4);
+
+    &>[class^="icon-"] [class*=" icon-"] {
+      color: transparentize($black, 0.4) !important;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $basebgcolor;
+
+      &>[class^="icon-"] [class*=" icon-"] {
+        color: $basebgcolor !important;
+      }
+
+    }
+
+  }
+
+  ul.hidden-links {
+    background: transparent;
+    box-shadow: 0 13px 43px -13px transparentize($black, .85);
+
+    &:after {
+      background: $white;
+    }
+
+    ul {
+      background: transparent;
+      box-shadow: 0 13px 43px -13px transparentize($black, .85);
+
+      &:after {
+        background: $white;
+      }
+
+    }
+
+    li {
+      a {
+        color: transparentize($black, 0.4);
+      }
+
+    }
+
+  }
+
+  .normal-span {
+    a:after {
+      border-color: transparentize($black, 0.7);
+    }
+
+  }
+
+  .menu-feedback {
+    border-color: transparentize($black, 0.9);
+  }
+
+  .icon-cross {
+    color: inherit !important;
+  }
+
+  .normal-span-phone {
+    color: transparentize($black, 0.1) !important;
+  }
+  /* /#sidebar */
+}
+
+
+.box-with-shadow.static-dark{
+  .head-container {
+    background: transparentize($black, 0.1)!important;
+    color: transparentize($black, 0.4)!important;
+    border-bottom: transparentize($black, 0.1)!important;
+    * {
+      color: transparentize($white, 0.4) !important;
+    }
+  }  
+}
+
+.box-with-shadow.static-light{
+  .head-container {
+    background: $white!important;
+    color: transparentize($white, 0.4)!important;
+    border-bottom: $white!important;
+    * {
+      color: transparentize($black, 0.4) !important;
+    }
+  }
+}
+
+
+.box-with-shadow.light, .mega-menu-inner.light {
+    .bg-grey {
+      background: #f2f3f5 !important;
+      border-bottom: 1px solid #f2f3f5 !important;
+      box-shadow: none !important;
+    }
+}
+
+
+.mega-menu.light{
+
+  .top-menu-top {
+    background: $black;
+    color: transparentize($white, 0.4)!important;
+
+    .top-menu-title {
+      color: transparentize($white, 0)!important;
+    }
+
+    .soc-icons {
+      a {
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: transparentize($white, 0.4) !important;
+        }
+
+      }
+
+      a:hover,
+      ul>li>a:focus,
+      ul>li>a:active {
+      	box-shadow:none;
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: transparentize($white, 0) !important;
+        }
+
+      }
+
+    }
+
+  }
+
+  .top-menu-toggle-btn {
+    background: $black;
+
+    .toggle-btn-block {
+      span {
+        color: $white;
+      }
+
+    }
+
+  }  
+  
+}
+
+.light{
+  &>#sidebar {
+    background: $white;
+    color: transparentize($black, 0.4);
+
+    .closer-link {
+      color: transparentize($black, 0.4);
+
+      span {
+        color: inherit;
+      }
+
+      &:hover {
+        color: $basebgcolor;
+      }
+
+    }
+
+    .nav-bar {
+      a {
+        color: transparentize($black, 0.2);
+
+        span {
+          color: inherit;
+        }
+
+        [class^="icon-"] [class*=" icon-"] {
+          color: transparentize($black, 0.4);
+        }
+
+      }
+
+      a:active,
+      a:hover,
+      a:focus,
+      a.active {
+        color: $basebgcolor;
+        border-color: transparent !important;
+        box-shadow:none;
+      }
+
+      li {
+        ul {
+          background: none;
+          box-shadow: none;
+
+          li {
+            a {
+              color: transparentize($black, 0.4);
+            }
+
+            a:hover,
+            *:focus,
+            a.active {
+              color: $basebgcolor;
+              border-color: transparent !important;
+              box-shadow:none;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .phone {
+      color: transparentize($black, 0.4);
+    }
+
+    .callback {
+      color: transparentize($black, 0.4);
+    }
+
+    .mail-to {
+      color: transparentize($black, 0.4);
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $basebgcolor;
+      }
+
+    }
+
+    .soc-icons {
+      a {
+        color: transparentize($black, 0.4);
+
+        &:hover,
+        &:focus,
+        &.active {
+          color: $basebgcolor;
+        }
+
+      }
+
+    }
+
+    .copyright {
+      color: transparentize($black, 0.4);
+    }
+
+  }
+}
+
+.btn-order-send {
+  color: $white;
+  background: $basebgcolor;
+  &:hover, &:focus, &:active{
+    color: $white;
+    background: lighten($basebgcolor, 10%);
+  }
+}
+
+.transparenta {
+  background: transparent !important;
+}
+
+.mega-menu {
+  background: transparent !important;
+}
+
+.box-with-shadow {
+  background: transparent !important;
+  box-shadow: 0 0 42px transparentize($black, .8);
+}
+
+.mega-menu.shadow-none {
+  .box-with-shadow {
+    box-shadow: none !important;
+  }
+
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+/* FOR BOTH TYPES */
+.li-open:before {
+  background: $basebgcolor !important;
+}
+
+.prod-cnt {
+  background: #66cc33;
+  color: #fff;
+}
+
+
+:focus::-webkit-input-placeholder {
+  color: transparent
+}
+
+:focus::-moz-placeholder {
+  color: transparent
+}
+
+:focus:-moz-placeholder {
+  color: transparent
+}
+
+:focus:-ms-input-placeholder {
+  color: transparent
+}
+
+
+.price-box {
+  background: $basebgcolor !important;
+  border-color: $basebgcolor !important;
+}
+
+.footer {
+  .btn-color {
+    box-shadow: 0 10px 30px transparentize($basebgcolor, .5);
+    @include dur(200);
+
+    &:hover {
+      box-shadow: none;
+    }
+
+  }
+
+}
+
+.inner-sections{
+  .flex-container-2{
+    ul{
+      li{        
+        &>span{
+             a, i{          
+            color:#252525;
+          }
+        }
+      }
+    }
+    ul{
+      li:hover, li:active, li:focus, li.active{        
+        &>span{
+             a, i{          
+            color:$basebgcolor;
+          }
+        }
+      }
+    }
+    ul.nav-bar-right{
+      &>li.active{         
+        &>span{
+            background:$basebgcolor;
+            &>a{          
+            color:$white;
+            &>i{ 
+				color:$white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.slide-ctrl-link{
+  span{
+    color:#252525;
+  }
+  &:hover, &.active{
+    span{
+      color:$basebgcolor;
+    }
+  }
+}
+
+.btn-color{
+    background:$basebgcolor;
+    color:#fff;
+    box-shadow: 0 10px 30px transparentize($basebgcolor, .5);
+    @include dur(200);
+}
+
+a:hover{
+    color:$basebgcolor;
+    box-shadow:none;
+}
+
+.services-tpl1, #projects-owl-2{
+  a.inner-flex{
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#4d000000',GradientType=0 );
+    &:hover{
+      background: transparentize($basebgcolor, .1);
+    } 
+  }
+}
+
+.services-elements:hover{
+  a.inner-flex{    
+      background: transparentize($basebgcolor, .1);     
+  }
+  .elem-num{
+    z-index:4!important;
+  }
+}
+
+
+
+.services{
+  [class^="icon-"], [class*=" icon-"], [class*="uf-vector-"]{  
+    color:$basebgcolor;
+  } 
+}
+
+
+
+#projects-3, #projects-5{
+  a.inner-flex{
+    &:hover{
+      background: transparentize(#000, .2);
+    }
+    p{
+      color:#fff;
+    }
+    .title-top{
+      color: transparentize($white, .4);
+    }
+  }  
+}
+
+#projects-4{
+  a.inner-flex{
+    &:hover{      
+     /* background: transparentize(#fff, .2); */
+    }
+    p{
+      color:#000;
+    }
+    .title-top{
+      color: transparentize(#000, .4);
+    }
+  }  
+}
+
+@media(max-width:1024px){
+  #projects-3, #projects-5{
+    a.inner-flex{      
+        background: transparentize(#000, .8);
+    }  
+  }
+
+  #projects-4{
+    a.inner-flex{      
+      /*  background: transparentize(#fff, .2);  */    
+    }  
+  }
+}
+
+
+.about-us{
+ &.about-4, &.about-5{
+    .sec-name{
+      color:#000;
+    }
+ }
+  &.about-5{
+    .about-right{
+        padding-left:0;
+        background:$basebgcolor;
+        color:#fff;
+        *{
+          color:#fff;
+        }
+      }
+  }
+}
+
+.products{  
+  .products-navbar{    
+    li{
+      &>span{
+        color:#000;
+      }
+    }
+    li:hover, li:active, li:focus, li.active{
+      &>span{
+        background:$basebgcolor;
+        color:#fff;
+      }
+    }
+  }
+}
+
+.services-tpl6{    
+    .item{
+        .btn-default:hover {
+          background-color: $basebgcolor;   
+          /*box-shadow: 0 10px 30px transparentize($basebgcolor, .7);*/
+          box-shadow:none;
+          color: $white;   
+        }        
+    }
+    .item-2{
+      .item-block{
+          border-color:#e1e1e1
+        }
+    }
+}
+
+#ajax-add-answer .select2.select2-container.select2-container--default.select2-container--open{
+  border-color:$basebgcolor;  
+}
+
+#ajax-add-answer .select2-container.select2-container--default.select2-container--open{
+  .select2-dropdown{
+    border-color:$basebgcolor;
+  }
+}
+
+.error{
+  border-color:#f00!important;
+}
+
+.advice-tpl1.dark, .advice-tpl2.dark{
+  .advice-text{
+    color: $white;
+  }
+}
+
+
+
+.reviews{  
+  .review-user-name{
+    color:$basebgcolor;
+  }
+}
+
+.style-switcher .options[data-code="LSM_BASE_COLOR"] a.color_ch.active{
+  border: 3px solid #fff; 
+  box-shadow: 0 0 0 2px $basebgcolor;
+}
+
+.button-group{
+	.btn-color{
+		box-shadow:none;
+	}
+}
+
+.inner-slider-block{
+  .owl-nav{
+    background: $basebgcolor;
+    .lsm-stack{
+      background: $basebgcolor;
+      span{
+        background: $basebgcolor;
+        color:#fff;
+      }
+    }
+  }
+}
+
+#inner-page-slider {
+  .owl-thumbs{
+    .owl-thumb-item.active{
+      border-color: $basebgcolor;
+    }
+  }
+}
+
+.btn-default.active {   
+  color: $basebgcolor;
+  box-shadow:none;    
+}
+
+.product-lable{
+  background: $basebgcolor;
+  color:#fff;
+}
+
+  input[type="radio"] + label span, input[type="checkbox"] + label span {
+    border: 2px solid #eceef2 ;}  
+  input[type="radio"]:checked + label span {
+    border: 5px solid $basebgcolor;
+    background: #fff; }
+   input[type="checkbox"]:checked + label span {
+    border-color: $basebgcolor;
+    background: $basebgcolor;
+    background-image: url(../../img/white-arrow.png), url(../img/white-arrow.png);   
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff; 
+  }
+
+.uploader{
+  .action{
+    background: $basebgcolor;
+    border-color: $basebgcolor;
+  }
+} 
+
+
+.style-switcher .options a.current{   
+   border:2px solid $basebgcolor;
+   color:$basebgcolor;
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label{
+  a{
+    color:$basebgcolor;
+    &:hover{
+      color:#333;
+    }
+  }
+}
+
+.color_ch.custom_color_theme.colors{
+  background: rgb(252,171,33)!important;
+  background: -moz-linear-gradient(-45deg, rgba(252,171,33,1) 0%, rgba(249,25,45,1) 50%, rgba(177,35,155,1) 100%)!important;
+  background: -webkit-linear-gradient(-45deg, rgba(252,171,33,1) 0%,rgba(249,25,45,1) 50%,rgba(177,35,155,1) 100%)!important;
+  background: linear-gradient(135deg, rgba(252,171,33,1) 0%,rgba(249,25,45,1) 50%,rgba(177,35,155,1) 100%)!important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcab21', endColorstr='#b1239b',GradientType=1 )!important;
+}
+
+footer.light>.footer{ 
+    position:relative;
+    overflow:hidden;
+    background-color:transparent!important;
+    &:before{
+      display:block;
+      position:absolute;
+      top:0;
+      left:-100px;
+      content:'';
+      width: calc(100% + 200px);
+      height: calc(100% + 200px);
+      z-index:-1;
+      -webkit-box-shadow: inset 0px 0px 42px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 0px 42px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 42px 0px rgba(0,0,0,0.2);
+    } 
+     
+}
+
+footer.dark{  
+  .logo {
+    color: $white;
+
+    span {
+      color: $basebgcolor;
+    }
+
+  }
+}
+
+footer.light{  
+  .logo {
+    color: transparentize($black, 0.2);
+
+    span {
+      color: $basebgcolor;
+    }
+
+  }
+}

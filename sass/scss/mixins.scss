@@ -1,0 +1,89 @@
+@import "varibles.scss";
+@mixin brr($rs, $sz, $color: #ff9900){	
+	border: $sz solid $color;
+	-webkit-border-radius: $rs;
+	border-radius: $rs;
+}
+
+@mixin dur($t){
+	-webkit-transition-duration: $t + ms;
+    -o-transition-duration: $t + ms;
+    -moz-transition-duration: $t + ms;
+    transition-duration: $t + ms;
+}
+
+
+@mixin bg($img, $rp:no-repeat, $pos:0 0, $sz:auto){
+	 @if $img {
+		background-image: url(../img/#{$img});
+		background-repeat: $rp;
+		background-position: $pos;
+		background-size: $sz;
+	} @else {
+		background: transparent;
+	}
+}
+
+@mixin bgcheckbox($img){
+	background-image:url(../img/#{$img});
+	background-repeat: no-repeat;
+	background-position:center center;
+}
+
+@mixin brdl($sz, $color, $type:solid){
+	border-top:$sz + px $type $color;
+	border-right:$sz + px $type $color;
+	border-bottom:$sz + px $type $color;
+	border-left:0 $type $color;
+}
+
+@mixin brdl2($bg:transparent){
+	background: $bg;
+}
+
+@mixin brdr($sz, $color, $type:solid){
+	border-top:$sz + px $type $color;
+	border-right:0 $type $color;
+	border-bottom:$sz + px $type $color;
+	border-left:$sz + px $type $color;
+}
+
+@mixin transY($y){
+	-webkit-transform: translateY($y + px);
+	-moz-transform: translateY($y + px);
+	-o-transform: translateY($y + px);
+	-ms-transform: translateY($y + px);
+	transform: translateY($y + px);
+}
+
+@mixin transX($x){
+	-webkit-transform: translateX($x + px);
+	-moz-transform: translateX($x + px);
+	-o-transform: translateX($x + px);
+	-ms-transform: translateX($x + px);
+	transform: translateX($x + px);
+}
+
+@mixin transXY($x, $y){
+	-webkit-transform: translate($x + px, $y + px);
+	-moz-transform: translate($x + px, $y + px);
+	-o-transform: translate($x + px, $y + px);
+	-ms-transform: translate($x + px, $y + px);
+	transform: translate($x + px, $y + px);
+}
+
+@mixin skx($deg){
+	-webkit-transform: skewX($deg + deg);
+	-moz-transform: skewX($deg + deg);
+	-o-transform: skewX($deg + deg);
+	-ms-transform: skewX($deg + deg);
+	transform: skewX($deg + deg);
+}
+
+@mixin sklXY($x, $y){
+	-webkit-transform: scale($x, $y);
+	-moz-transform: scale($x, $y);
+	-o-transform: scale($x, $y);
+	-ms-transform: scale($x, $y);
+	transform: scale($x, $y);
+}

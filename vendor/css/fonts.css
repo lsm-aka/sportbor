@@ -1,0 +1,883 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Thin'), local('Roboto-Thin'), url('fonts/roboto/Robotothin.woff2') format('woff2'), url('fonts/roboto/Robotothin.woff') format('woff'), url('fonts/roboto/Robotothin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url('fonts/roboto/Robotothinitalic.woff2') format('woff2'), url('fonts/roboto/Robotothinitalic.woff') format('woff'), url('fonts/roboto/Robotothinitalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light'), local('Roboto-Light'), url('fonts/roboto/Robotolight.woff2') format('woff2'), url('fonts/roboto/Robotolight.woff') format('woff'), url('fonts/roboto/Robotolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('fonts/roboto/Robotolightitalic.woff2') format('woff2'), url('fonts/roboto/Robotolightitalic.woff') format('woff'), url('fonts/roboto/Robotolightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'), url('fonts/roboto/Roboto.woff2') format('woff2'), url('fonts/roboto/Roboto.woff') format('woff'), url('fonts/roboto/Roboto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Italic'), local('Roboto-Italic'), url('fonts/roboto/Robotoitalic.woff2') format('woff2'), url('fonts/roboto/Robotoitalic.woff') format('woff'), url('fonts/roboto/Robotoitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('fonts/roboto/Robotomedium.woff2') format('woff2'), url('fonts/roboto/Robotomedium.woff') format('woff'), url('fonts/roboto/Robotomedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('fonts/roboto/Robotomediumitalic.woff2') format('woff2'), url('fonts/roboto/Robotomediumitalic.woff') format('woff'), url('fonts/roboto/Robotomediumitalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('fonts/roboto/Robotobold.woff2') format('woff2'), url('fonts/roboto/Robotobold.woff') format('woff'), url('fonts/roboto/Robotobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('fonts/roboto/Robotobolditalic.woff2') format('woff2'), url('fonts/roboto/Robotobolditalic.woff') format('woff'), url('fonts/roboto/Robotobolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black'), local('Roboto-Black'), url('fonts/roboto/Robotoblack.woff2') format('woff2'), url('fonts/roboto/Robotoblack.woff') format('woff'), url('fonts/roboto/Robotoblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('fonts/roboto/Robotoblackitalic.woff2') format('woff2'), url('fonts/roboto/Robotoblackitalic.woff') format('woff'), url('fonts/roboto/Robotoblackitalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-slab';
+    src: url('fonts/roboto/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+/* Raleway */
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Thin'), local('Raleway-Thin'), url('fonts/raleway/ralewaythin.woff2') format('woff2'), url('fonts/raleway/ralewaythin.woff') format('woff'), url('fonts/raleway/ralewaythin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Thin Italic'), local('Raleway-ThinItalic'), url('fonts/raleway/ralewaythinitalic.woff2') format('woff2'), url('fonts/raleway/ralewaythinitalic.woff') format('woff'), url('fonts/raleway/ralewaythinitalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url('fonts/raleway/ralewayextralight.woff2') format('woff2'), url('fonts/raleway/ralewayextralight.woff') format('woff'), url('fonts/raleway/ralewayextralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraLight Italic'), local('Raleway-ExtraLightItalic'), url('fonts/raleway/ralewayextralightitalic.woff2') format('woff2'), url('fonts/raleway/ralewayextralightitalic.woff') format('woff'), url('fonts/raleway/ralewayextralightitalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Light'), local('Raleway-Light'), url('fonts/raleway/ralewaylight.woff2') format('woff2'), url('fonts/raleway/ralewaylight.woff') format('woff'), url('fonts/raleway/ralewaylight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Light Italic'), local('Raleway-LightItalic'), url('fonts/raleway/ralewaylightitalic.woff2') format('woff2'), url('fonts/raleway/ralewaylightitalic.woff') format('woff'), url('fonts/raleway/ralewaylightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Regular'), local('Raleway-Regular'), url('fonts/raleway/ralewayregular.woff2') format('woff2'), url('fonts/raleway/ralewayregular.woff') format('woff'), url('fonts/raleway/ralewayregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Italic'), local('Raleway-Italic'), url('fonts/raleway/ralewayitalic.woff2') format('woff2'), url('fonts/raleway/ralewayitalic.woff') format('woff'), url('fonts/raleway/ralewayitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Medium'), local('Raleway-Medium'), url('fonts/raleway/ralewaymedium.woff2') format('woff2'), url('fonts/raleway/ralewaymedium.woff') format('woff'), url('fonts/raleway/ralewaymedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Medium Italic'), local('Raleway-MediumItalic'), url('fonts/raleway/ralewaymediumitalic.woff2') format('woff2'), url('fonts/raleway/ralewaymediumitalic.woff') format('woff'), url('fonts/raleway/ralewaymediumitalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url('fonts/raleway/ralewaysemibold.woff2') format('woff2'), url('fonts/raleway/ralewaysemibold.woff') format('woff'), url('fonts/raleway/ralewaysemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway SemiBold Italic'), local('Raleway-SemiBoldItalic'), url('fonts/raleway/ralewaysemibolditalic.woff2') format('woff2'), url('fonts/raleway/ralewaysemibolditalic.woff') format('woff'), url('fonts/raleway/ralewaysemibolditalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Bold'), local('Raleway-Bold'), url('fonts/raleway/ralewaybold.woff2') format('woff2'), url('fonts/raleway/ralewaybold.woff') format('woff'), url('fonts/raleway/ralewaybold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Bold Italic'), local('Raleway-BoldItalic'), url('fonts/raleway/ralewaybolditalic.woff2') format('woff2'), url('fonts/raleway/ralewaybolditalic.woff') format('woff'), url('fonts/raleway/ralewaybolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url('fonts/raleway/ralewayextrabold.woff2') format('woff2'), url('fonts/raleway/ralewayextrabold.woff') format('woff'), url('fonts/raleway/ralewayextrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway ExtraBold Italic'), local('Raleway-ExtraBoldItalic'), url('fonts/raleway/ralewayextrabolditalic.woff2') format('woff2'), url('fonts/raleway/ralewayextrabolditalic.woff') format('woff'), url('fonts/raleway/ralewayextrabolditalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Black'), local('Raleway-Black'), url('fonts/raleway/ralewayblack.woff2') format('woff2'), url('fonts/raleway/ralewayblack.woff') format('woff'), url('fonts/raleway/ralewayblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway Black Italic'), local('Raleway-BlackItalic'), url('fonts/raleway/ralewayblackitalic.woff2') format('woff2'), url('fonts/raleway/ralewayblackitalic.woff') format('woff'), url('fonts/raleway/ralewayblackitalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'lsmicons';
+  src:  url('fonts/iconfonts//lsmicons.eot?jergh0');
+  src:  url('fonts/iconfonts//lsmicons.eot?jergh0#iefix') format('embedded-opentype'),
+    url('fonts/iconfonts//lsmicons.ttf?jergh0') format('truetype'),
+    url('fonts/iconfonts//lsmicons.woff?jergh0') format('woff'),
+    url('fonts/iconfonts//lsmicons.svg?jergh0#lsmicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lsmicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cross:before {
+  content: "\e117";
+}
+.icon-navigate_before:before {
+  content: "\e408";
+}
+.icon-navigate_next:before {
+  content: "\e409";
+}
+.icon-expand_less:before {
+  content: "\e5ce";
+}
+.icon-expand_more:before {
+  content: "\e5cf";
+}
+.icon-check:before {
+  content: "\e900";
+}
+.icon-checkmark:before {
+  content: "\e901";
+}
+.icon-chevron-small-down:before {
+  content: "\e902";
+}
+.icon-chevron-small-left:before {
+  content: "\e903";
+}
+.icon-chevron-small-right:before {
+  content: "\e904";
+}
+.icon-chevron-small-up:before {
+  content: "\e905";
+}
+.icon-vk:before {
+  content: "\e906";
+}
+.icon-google:before {
+  content: "\e907";
+}
+.icon-instagram2:before {
+  content: "\e908";
+}
+.icon-linkedin2:before {
+  content: "\e909";
+}
+.icon-twitter2:before {
+  content: "\e90a";
+}
+.icon-tri_tochki:before {
+  content: "\e90b";
+}
+.icon-telefon:before {
+  content: "\e90c";
+}
+.icon-email:before {
+  content: "\e90d";
+}
+.icon-korzina3:before {
+  content: "\e90e";
+}
+.icon-b-arrow:before {
+  content: "\e90f";
+}
+.icon-pencil:before {
+  content: "\e910";
+}
+.icon-compass:before {
+  content: "\e949";
+}
+.icon-search2:before {
+  content: "\e986";
+}
+.icon-zoom-in:before {
+  content: "\e987";
+}
+.icon-zoom-out:before {
+  content: "\e988";
+}
+.icon-equalizer:before {
+  content: "\e992";
+}
+.icon-equalizer2:before {
+  content: "\e993";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-envelope-o:before {
+  content: "\f003";
+}
+.icon-cogs:before {
+  content: "\f085";
+}
+.icon-heart-o:before {
+  content: "\f08a";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-angle-up:before {
+  content: "\f106";
+}
+.icon-angle-down:before {
+  content: "\f107";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-odnoklassniki:before {
+  content: "\f263";
+}
+.icon-search:before {
+  content: "\e911";
+}
+
+
+@font-face {
+  font-family: 'Simple-Line-Icons';
+  src:url('fonts/web_fonts/Simple-Line-Icons.eot');
+  src:url('fonts/web_fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'),
+    url('fonts/web_fonts/Simple-Line-Icons.woff') format('woff'),
+    url('fonts/web_fonts/Simple-Line-Icons.ttf') format('truetype'),
+    url('fonts/web_fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'Simple-Line-Icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.uf-vector-user-female, .uf-vector-user-follow, .uf-vector-user-following, .uf-vector-user-unfollow, .uf-vector-trophy, .uf-vector-screen-smartphone, .uf-vector-screen-desktop, .uf-vector-plane, .uf-vector-notebook, .uf-vector-moustache, .uf-vector-mouse, .uf-vector-magnet, .uf-vector-energy, .uf-vector-emoticon-smile, .uf-vector-disc, .uf-vector-cursor-move, .uf-vector-crop, .uf-vector-credit-card, .uf-vector-chemistry, .uf-vector-user, .uf-vector-speedometer, .uf-vector-social-youtube, .uf-vector-social-twitter, .uf-vector-social-tumblr, .uf-vector-social-facebook, .uf-vector-social-dropbox, .uf-vector-social-dribbble, .uf-vector-shield, .uf-vector-screen-tablet, .uf-vector-magic-wand, .uf-vector-hourglass, .uf-vector-graduation, .uf-vector-ghost, .uf-vector-game-controller, .uf-vector-fire, .uf-vector-eyeglasses, .uf-vector-envelope-open, .uf-vector-envelope-letter, .uf-vector-bell, .uf-vector-badge, .uf-vector-anchor, .uf-vector-wallet, .uf-vector-vector, .uf-vector-speech, .uf-vector-puzzle, .uf-vector-printer, .uf-vector-present, .uf-vector-playlist, .uf-vector-pin, .uf-vector-picture, .uf-vector-map, .uf-vector-layers, .uf-vector-handbag, .uf-vector-globe-alt, .uf-vector-globe, .uf-vector-frame, .uf-vector-folder-alt, .uf-vector-film, .uf-vector-feed, .uf-vector-earphones-alt, .uf-vector-earphones, .uf-vector-drop, .uf-vector-drawer, .uf-vector-docs, .uf-vector-directions, .uf-vector-direction, .uf-vector-diamond, .uf-vector-cup, .uf-vector-compass, .uf-vector-call-out, .uf-vector-call-in, .uf-vector-call-end, .uf-vector-calculator, .uf-vector-bubbles, .uf-vector-briefcase, .uf-vector-book-open, .uf-vector-basket-loaded, .uf-vector-basket, .uf-vector-bag, .uf-vector-action-undo, .uf-vector-action-redo, .uf-vector-wrench, .uf-vector-umbrella, .uf-vector-trash, .uf-vector-tag, .uf-vector-support, .uf-vector-size-fullscreen, .uf-vector-size-actual, .uf-vector-shuffle, .uf-vector-share-alt, .uf-vector-share, .uf-vector-rocket, .uf-vector-question, .uf-vector-pie-chart, .uf-vector-pencil, .uf-vector-note, .uf-vector-music-tone-alt, .uf-vector-music-tone, .uf-vector-microphone, .uf-vector-loop, .uf-vector-logout, .uf-vector-login, .uf-vector-list, .uf-vector-like, .uf-vector-home, .uf-vector-grid, .uf-vector-graph, .uf-vector-equalizer, .uf-vector-dislike, .uf-vector-cursor, .uf-vector-control-start, .uf-vector-control-rewind, .uf-vector-control-play, .uf-vector-control-pause, .uf-vector-control-forward, .uf-vector-control-end, .uf-vector-calendar, .uf-vector-bulb, .uf-vector-bar-chart, .uf-vector-arrow-up, .uf-vector-arrow-right, .uf-vector-arrow-left, .uf-vector-arrow-down, .uf-vector-ban, .uf-vector-bubble, .uf-vector-camcorder, .uf-vector-camera, .uf-vector-check, .uf-vector-clock, .uf-vector-close, .uf-vector-cloud-download, .uf-vector-cloud-upload, .uf-vector-doc, .uf-vector-envelope, .uf-vector-eye, .uf-vector-flag, .uf-vector-folder, .uf-vector-heart, .uf-vector-info, .uf-vector-key, .uf-vector-link, .uf-vector-lock, .uf-vector-lock-open, .uf-vector-magnifier, .uf-vector-magnifier-add, .uf-vector-magnifier-remove, .uf-vector-paper-clip, .uf-vector-paper-plane, .uf-vector-plus, .uf-vector-pointer, .uf-vector-power, .uf-vector-refresh, .uf-vector-reload, .uf-vector-settings, .uf-vector-star, .uf-vector-symbol-female, .uf-vector-symbol-male, .uf-vector-target, .uf-vector-volume-1, .uf-vector-volume-2, .uf-vector-volume-off, .uf-vector-users {
+  font-family: 'Simple-Line-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.uf-vector-user-female:before {
+  content: "\e000";
+}
+.uf-vector-user-follow:before {
+  content: "\e002";
+}
+.uf-vector-user-following:before {
+  content: "\e003";
+}
+.uf-vector-user-unfollow:before {
+  content: "\e004";
+}
+.uf-vector-trophy:before {
+  content: "\e006";
+}
+.uf-vector-screen-smartphone:before {
+  content: "\e010";
+}
+.uf-vector-screen-desktop:before {
+  content: "\e011";
+}
+.uf-vector-plane:before {
+  content: "\e012";
+}
+.uf-vector-notebook:before {
+  content: "\e013";
+}
+.uf-vector-moustache:before {
+  content: "\e014";
+}
+.uf-vector-mouse:before {
+  content: "\e015";
+}
+.uf-vector-magnet:before {
+  content: "\e016";
+}
+.uf-vector-energy:before {
+  content: "\e020";
+}
+.uf-vector-emoticon-smile:before {
+  content: "\e021";
+}
+.uf-vector-disc:before {
+  content: "\e022";
+}
+.uf-vector-cursor-move:before {
+  content: "\e023";
+}
+.uf-vector-crop:before {
+  content: "\e024";
+}
+.uf-vector-credit-card:before {
+  content: "\e025";
+}
+.uf-vector-chemistry:before {
+  content: "\e026";
+}
+.uf-vector-user:before {
+  content: "\e005";
+}
+.uf-vector-speedometer:before {
+  content: "\e007";
+}
+.uf-vector-social-youtube:before {
+  content: "\e008";
+}
+.uf-vector-social-twitter:before {
+  content: "\e009";
+}
+.uf-vector-social-tumblr:before {
+  content: "\e00a";
+}
+.uf-vector-social-facebook:before {
+  content: "\e00b";
+}
+.uf-vector-social-dropbox:before {
+  content: "\e00c";
+}
+.uf-vector-social-dribbble:before {
+  content: "\e00d";
+}
+.uf-vector-shield:before {
+  content: "\e00e";
+}
+.uf-vector-screen-tablet:before {
+  content: "\e00f";
+}
+.uf-vector-magic-wand:before {
+  content: "\e017";
+}
+.uf-vector-hourglass:before {
+  content: "\e018";
+}
+.uf-vector-graduation:before {
+  content: "\e019";
+}
+.uf-vector-ghost:before {
+  content: "\e01a";
+}
+.uf-vector-game-controller:before {
+  content: "\e01b";
+}
+.uf-vector-fire:before {
+  content: "\e01c";
+}
+.uf-vector-eyeglasses:before {
+  content: "\e01d";
+}
+.uf-vector-envelope-open:before {
+  content: "\e01e";
+}
+.uf-vector-envelope-letter:before {
+  content: "\e01f";
+}
+.uf-vector-bell:before {
+  content: "\e027";
+}
+.uf-vector-badge:before {
+  content: "\e028";
+}
+.uf-vector-anchor:before {
+  content: "\e029";
+}
+.uf-vector-wallet:before {
+  content: "\e02a";
+}
+.uf-vector-vector:before {
+  content: "\e02b";
+}
+.uf-vector-speech:before {
+  content: "\e02c";
+}
+.uf-vector-puzzle:before {
+  content: "\e02d";
+}
+.uf-vector-printer:before {
+  content: "\e02e";
+}
+.uf-vector-present:before {
+  content: "\e02f";
+}
+.uf-vector-playlist:before {
+  content: "\e030";
+}
+.uf-vector-pin:before {
+  content: "\e031";
+}
+.uf-vector-picture:before {
+  content: "\e032";
+}
+.uf-vector-map:before {
+  content: "\e033";
+}
+.uf-vector-layers:before {
+  content: "\e034";
+}
+.uf-vector-handbag:before {
+  content: "\e035";
+}
+.uf-vector-globe-alt:before {
+  content: "\e036";
+}
+.uf-vector-globe:before {
+  content: "\e037";
+}
+.uf-vector-frame:before {
+  content: "\e038";
+}
+.uf-vector-folder-alt:before {
+  content: "\e039";
+}
+.uf-vector-film:before {
+  content: "\e03a";
+}
+.uf-vector-feed:before {
+  content: "\e03b";
+}
+.uf-vector-earphones-alt:before {
+  content: "\e03c";
+}
+.uf-vector-earphones:before {
+  content: "\e03d";
+}
+.uf-vector-drop:before {
+  content: "\e03e";
+}
+.uf-vector-drawer:before {
+  content: "\e03f";
+}
+.uf-vector-docs:before {
+  content: "\e040";
+}
+.uf-vector-directions:before {
+  content: "\e041";
+}
+.uf-vector-direction:before {
+  content: "\e042";
+}
+.uf-vector-diamond:before {
+  content: "\e043";
+}
+.uf-vector-cup:before {
+  content: "\e044";
+}
+.uf-vector-compass:before {
+  content: "\e045";
+}
+.uf-vector-call-out:before {
+  content: "\e046";
+}
+.uf-vector-call-in:before {
+  content: "\e047";
+}
+.uf-vector-call-end:before {
+  content: "\e048";
+}
+.uf-vector-calculator:before {
+  content: "\e049";
+}
+.uf-vector-bubbles:before {
+  content: "\e04a";
+}
+.uf-vector-briefcase:before {
+  content: "\e04b";
+}
+.uf-vector-book-open:before {
+  content: "\e04c";
+}
+.uf-vector-basket-loaded:before {
+  content: "\e04d";
+}
+.uf-vector-basket:before {
+  content: "\e04e";
+}
+.uf-vector-bag:before {
+  content: "\e04f";
+}
+.uf-vector-action-undo:before {
+  content: "\e050";
+}
+.uf-vector-action-redo:before {
+  content: "\e051";
+}
+.uf-vector-wrench:before {
+  content: "\e052";
+}
+.uf-vector-umbrella:before {
+  content: "\e053";
+}
+.uf-vector-trash:before {
+  content: "\e054";
+}
+.uf-vector-tag:before {
+  content: "\e055";
+}
+.uf-vector-support:before {
+  content: "\e056";
+}
+.uf-vector-size-fullscreen:before {
+  content: "\e057";
+}
+.uf-vector-size-actual:before {
+  content: "\e058";
+}
+.uf-vector-shuffle:before {
+  content: "\e059";
+}
+.uf-vector-share-alt:before {
+  content: "\e05a";
+}
+.uf-vector-share:before {
+  content: "\e05b";
+}
+.uf-vector-rocket:before {
+  content: "\e05c";
+}
+.uf-vector-question:before {
+  content: "\e05d";
+}
+.uf-vector-pie-chart:before {
+  content: "\e05e";
+}
+.uf-vector-pencil:before {
+  content: "\e05f";
+}
+.uf-vector-note:before {
+  content: "\e060";
+}
+.uf-vector-music-tone-alt:before {
+  content: "\e061";
+}
+.uf-vector-music-tone:before {
+  content: "\e062";
+}
+.uf-vector-microphone:before {
+  content: "\e063";
+}
+.uf-vector-loop:before {
+  content: "\e064";
+}
+.uf-vector-logout:before {
+  content: "\e065";
+}
+.uf-vector-login:before {
+  content: "\e066";
+}
+.uf-vector-list:before {
+  content: "\e067";
+}
+.uf-vector-like:before {
+  content: "\e068";
+}
+.uf-vector-home:before {
+  content: "\e069";
+}
+.uf-vector-grid:before {
+  content: "\e06a";
+}
+.uf-vector-graph:before {
+  content: "\e06b";
+}
+.uf-vector-equalizer:before {
+  content: "\e06c";
+}
+.uf-vector-dislike:before {
+  content: "\e06d";
+}
+.uf-vector-cursor:before {
+  content: "\e06e";
+}
+.uf-vector-control-start:before {
+  content: "\e06f";
+}
+.uf-vector-control-rewind:before {
+  content: "\e070";
+}
+.uf-vector-control-play:before {
+  content: "\e071";
+}
+.uf-vector-control-pause:before {
+  content: "\e072";
+}
+.uf-vector-control-forward:before {
+  content: "\e073";
+}
+.uf-vector-control-end:before {
+  content: "\e074";
+}
+.uf-vector-calendar:before {
+  content: "\e075";
+}
+.uf-vector-bulb:before {
+  content: "\e076";
+}
+.uf-vector-bar-chart:before {
+  content: "\e077";
+}
+.uf-vector-arrow-up:before {
+  content: "\e078";
+}
+.uf-vector-arrow-right:before {
+  content: "\e079";
+}
+.uf-vector-arrow-left:before {
+  content: "\e07a";
+}
+.uf-vector-arrow-down:before {
+  content: "\e07b";
+}
+.uf-vector-ban:before {
+  content: "\e07c";
+}
+.uf-vector-bubble:before {
+  content: "\e07d";
+}
+.uf-vector-camcorder:before {
+  content: "\e07e";
+}
+.uf-vector-camera:before {
+  content: "\e07f";
+}
+.uf-vector-check:before {
+  content: "\e080";
+}
+.uf-vector-clock:before {
+  content: "\e081";
+}
+.uf-vector-close:before {
+  content: "\e082";
+}
+.uf-vector-cloud-download:before {
+  content: "\e083";
+}
+.uf-vector-cloud-upload:before {
+  content: "\e084";
+}
+.uf-vector-doc:before {
+  content: "\e085";
+}
+.uf-vector-envelope:before {
+  content: "\e086";
+}
+.uf-vector-eye:before {
+  content: "\e087";
+}
+.uf-vector-flag:before {
+  content: "\e088";
+}
+.uf-vector-folder:before {
+  content: "\e089";
+}
+.uf-vector-heart:before {
+  content: "\e08a";
+}
+.uf-vector-info:before {
+  content: "\e08b";
+}
+.uf-vector-key:before {
+  content: "\e08c";
+}
+.uf-vector-link:before {
+  content: "\e08d";
+}
+.uf-vector-lock:before {
+  content: "\e08e";
+}
+.uf-vector-lock-open:before {
+  content: "\e08f";
+}
+.uf-vector-magnifier:before {
+  content: "\e090";
+}
+.uf-vector-magnifier-add:before {
+  content: "\e091";
+}
+.uf-vector-magnifier-remove:before {
+  content: "\e092";
+}
+.uf-vector-paper-clip:before {
+  content: "\e093";
+}
+.uf-vector-paper-plane:before {
+  content: "\e094";
+}
+.uf-vector-plus2:before {
+  content: "\e095";
+}
+.uf-vector-pointer:before {
+  content: "\e096";
+}
+.uf-vector-power:before {
+  content: "\e097";
+}
+.uf-vector-refresh:before {
+  content: "\e098";
+}
+.uf-vector-reload:before {
+  content: "\e099";
+}
+.uf-vector-settings:before {
+  content: "\e09a";
+}
+.uf-vector-star:before {
+  content: "\e09b";
+}
+.uf-vector-symbol-female:before {
+  content: "\e09c";
+}
+.uf-vector-symbol-male:before {
+  content: "\e09d";
+}
+.uf-vector-target:before {
+  content: "\e09e";
+}
+.uf-vector-volume-1:before {
+  content: "\e09f";
+}
+.uf-vector-volume-2:before {
+  content: "\e0a0";
+}
+.uf-vector-volume-off:before {
+  content: "\e0a1";
+}
+.uf-vector-users:before {
+  content: "\e001";
+}
